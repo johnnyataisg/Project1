@@ -5,8 +5,6 @@
 
 /* Set padding to keep content from hitting the edges */
 .body-content {
-    padding-left: 15px;
-    padding-right: 15px;
 }
 
 /* Override the default bootstrap behavior where horizontal description lists 
@@ -21,4 +19,49 @@ input,
 select,
 textarea {
     max-width: 280px;
+}
+
+.header-center-align {
+    text-align: center;
+    background-image: url(../Content/bible-pictures-sermon-on-the-mount-958526-wallpaper.jpg);
+    background-repeat: no-repeat;
+    min-height: 800px;
+    padding: 0px;
+    margin-bottom: 0px;
+    padding-bottom: 0px;
+}
+
+.header-cover {
+    background-color: rgba(105, 105, 105, 0.35);
+    min-height: 800px;
+    margin-bottom: 0px;
+    padding: 0px;
+    padding-bottom: 0px;
+}
+
+.row2-video {
+    margin-top: 0px;
+    padding-top: 0px;
+    padding-left: 15px;
+    min-height: 500px;
+    width: 50%;
+    float: left;
+}
+
+.row2-intro {
+    margin-top: 0px;
+    padding-top: 0px;
+    padding-right: 15px;
+    min-height: 500px;
+    width: 50%;
+    float: right;
+}
+
+.intro-text {
+    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-size: 20px;
+    text-align: center;
+    margin-left: 10px;
+    margin-right: 10px;
+    margin-top: 50px;
 }
