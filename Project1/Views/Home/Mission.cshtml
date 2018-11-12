@@ -4,20 +4,36 @@
     ViewBag.Title = "Mission";
 }
 
+<link href="~/Scripts/popper.min.js" />
+
 <div class="jumbotron">
     <div class="container">
-        @using (Html.BeginForm())
-        {
-            <p>
-                Mission Selection: @Html.DropDownListFor(x => x.MissionName, new[] {
-                           new SelectListItem()
-                           {Text = "China Shanghai Mission", Value = "China Shanghai Mission"},
-                           new SelectListItem()
-                           {Text = "North Korea Pyongyang Mission", Value = "North Korea Pyongyang Mission"},
-                           new SelectListItem()
-                           {Text = "Spirit Prison Mission", Value = "Spirit Prison Mission"} }, "Choose a mission", new { @class = "form-control" })
-            </p>
-            <input class="btn btn-primary btn-group-lg" type="submit" value="Submit RSVP" />
-        }
+        <h3>Choose a mission:</h3>
+        <script>
+            function myFunction() {
+                document.getElementById("myDropdown").classList.toggle("show");
+            }
+            window.onclick = function(event) {
+              if (!event.target.matches('.dropbtn')) {
+
+                var dropdowns = document.getElementsByClassName("dropdown-content");
+                var i;
+                for (i = 0; i < dropdowns.length; i++) {
+                  var openDropdown = dropdowns[i];
+                  if (openDropdown.classList.contains('show')) {
+                    openDropdown.classList.remove('show');
+                  }
+                }
+              }
+            }
+        </script>
+        <div class="dropdown">
+            <button onclick="myFunction()" class="dropbtn">Select...</button>
+            <div id="myDropdown" class="dropdown-content">
+                <a href=@Url.Action("Submit", "Home", new { value = "Shanghai" })>China Shanghai Mission</a>
+                <a href=@Url.Action("Submit", "Home", new { value = "Pyongyang" })>North Korea Pyongyang Mission</a>
+                <a href=@Url.Action("Submit", "Home", new { value = "Spirit" })>Spirit Prison Mission</a>
+            </div>
+        </div>
     </div>
   </div>
