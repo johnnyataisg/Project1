@@ -1,7 +1,23 @@
-﻿
+﻿@model Project1.Models.Mission
+
 @{
     ViewBag.Title = "Mission";
 }
 
-<h2>Mission</h2>
-
+<div class="jumbotron">
+    <div class="container">
+        @using (Html.BeginForm())
+        {
+            <p>
+                Mission Selection: @Html.DropDownListFor(x => x.MissionName, new[] {
+                           new SelectListItem()
+                           {Text = "China Shanghai Mission", Value = "China Shanghai Mission"},
+                           new SelectListItem()
+                           {Text = "North Korea Pyongyang Mission", Value = "North Korea Pyongyang Mission"},
+                           new SelectListItem()
+                           {Text = "Spirit Prison Mission", Value = "Spirit Prison Mission"} }, "Choose a mission", new { @class = "form-control" })
+            </p>
+            <input class="btn btn-primary btn-group-lg" type="submit" value="Submit RSVP" />
+        }
+    </div>
+  </div>
