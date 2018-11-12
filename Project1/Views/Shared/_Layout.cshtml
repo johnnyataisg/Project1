@@ -3,22 +3,22 @@
 <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>@ViewBag.Title - My ASP.NET Application</title>
+    <title>@ViewBag.Title - Missionary Work</title>
     @Styles.Render("~/Content/css")
     @Scripts.Render("~/bundles/modernizr")
 </head>
 <body style="background-color: azure;">
-    <div class="navbar navbar-inverse navbar-fixed-top">
-        <div class="container">
-            <div class="navbar-header">
+    <div class="navbar navbar-inverse navbar-fixed-top" style="transition-duration: 0.4s;">
+        <div class="container" style="margin-left: 20px; width: 100%;">
+            <div class="navbar-header" style="float: left;">
                 <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                 </button>
-                @Html.ActionLink("Application name", "Index", "Home", new { area = "" }, new { @class = "navbar-brand" })
+                @Html.ActionLink("Missionary Portal", "Index", "Home", new { area = "" }, new { @class = "navbar-brand" })
             </div>
-            <div class="navbar-collapse collapse">
+            <div class="navbar-collapse collapse" style="float: right; margin-right: 30px;">
                 <ul class="nav navbar-nav">
                     <li>@Html.ActionLink("Mission", "Mission", "Home")</li>
                     <li>@Html.ActionLink("About", "About", "Home")</li>
@@ -31,7 +31,7 @@
         @RenderBody()
         <hr />
         <footer style="padding-left: 25px;">
-            <p>&copy; @DateTime.Now.Year - My ASP.NET Application</p>
+            <p>&copy; @DateTime.Now.Year - IS 403 Project 1 Missionary Portal</p>
         </footer>
     </div>
 

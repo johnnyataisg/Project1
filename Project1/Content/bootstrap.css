@@ -3016,8 +3016,7 @@ select[multiple].input-lg {
       -ms-user-select: none;
           user-select: none;
   background-image: none;
-  border: 1px solid transparent;
-  border-radius: 4px;
+  transition-duration: 0.4s;
 }
 .btn:focus,
 .btn:active:focus,
@@ -3433,8 +3432,7 @@ fieldset[disabled] .btn-link:focus {
 .btn-group-lg > .btn {
   padding: 10px 16px;
   font-size: 18px;
-  line-height: 1.3333333;
-  border-radius: 6px;
+  line-height: 1.5;
 }
 .btn-sm,
 .btn-group-sm > .btn {
