@@ -107,7 +107,6 @@ textarea {
     cursor: pointer;
     width: 200px;
     line-height: 1;
-    border-radius: 10px;
 }
 
 .dropbtn:hover, .dropbtn:focus {
