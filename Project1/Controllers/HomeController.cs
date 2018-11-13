@@ -30,6 +30,7 @@ namespace Project1.Controllers
                 mission.Language = "Mandarin Chinese";
                 mission.Climate = "Not too hot, mildly humid";
                 mission.Religion = "Materialism";
+                mission.Flag = "../Content/255px-Flag_of_the_People's_Republic_of_China.svg.png";
             }
             else if (value == "Pyongyang")
             {
@@ -39,6 +40,7 @@ namespace Project1.Controllers
                 mission.Language = "Korean";
                 mission.Climate = "Politically sensitive";
                 mission.Religion = "Kim Ancestral Worship";
+                mission.Flag = "../Content/1200px-Flag_of_North_Korea.svg.png";
             }
             else
             {
@@ -48,7 +50,9 @@ namespace Project1.Controllers
                 mission.Language = "Multilingual";
                 mission.Climate = "Not applicable";
                 mission.Religion = "Awaiting Conversion-ism";
+                mission.Flag = "../Content/Christ_in_Spirit_World-e1385391202877.jpg";
             }
+            ViewBag.Mission = mission.MissionName;
             ViewBag.Output += "<div class=\"mission-textbox\">";
             ViewBag.Output += "<h4>Mission Name: " + mission.MissionName + "</h4>";
             ViewBag.Output += "<h4>President's Name: " + mission.PresidentName + "</h4>";
@@ -56,21 +60,18 @@ namespace Project1.Controllers
             ViewBag.Output += "<h4>Language Spoken: " + mission.Language + "</h4>";
             ViewBag.Output += "<h4>Area Climate: " + mission.Climate + "</h4>";
             ViewBag.Output += "<h4>Local Religion: " + mission.Religion + "</h4>";
+            ViewBag.Output += "<img style=\"width: 300px; height: 200px;\" src=" + mission.Flag + ">";
             ViewBag.Output += "</div>";
             return View("MissionInformation");
         }
 
         public ActionResult About()
         {
-            ViewBag.Message = "Your application description page.";
-
             return View();
         }
 
         public ActionResult Contact()
         {
-            ViewBag.Message = "Your contact page.";
-
             return View();
         }
     }

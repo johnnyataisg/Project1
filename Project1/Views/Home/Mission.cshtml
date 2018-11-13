@@ -7,7 +7,7 @@
 <link href="~/Scripts/popper.min.js" />
 
 <div class="jumbotron">
-    <div class="container">
+    <div class="container" style="margin-left: 0px;">
         <h3>Choose a mission:</h3>
         <script>
             function myFunction() {
@@ -28,7 +28,7 @@
             }
         </script>
         <div class="dropdown">
-            <button onclick="myFunction()" class="dropbtn">Select...</button>
+            <button onclick="myFunction()" class="dropbtn">Missions</button>
             <div id="myDropdown" class="dropdown-content">
                 <a href=@Url.Action("Submit", "Home", new { value = "Shanghai" })>China Shanghai Mission</a>
                 <a href=@Url.Action("Submit", "Home", new { value = "Pyongyang" })>North Korea Pyongyang Mission</a>

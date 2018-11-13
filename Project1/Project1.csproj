@@ -157,11 +157,16 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Content\1200px-Flag_of_North_Korea.svg.png" />
+    <Content Include="Content\2000px-Logo_of_the_Church_of_Jesus_Christ_of_Latter-day_Saints.svg.png" />
+    <Content Include="Content\255px-Flag_of_the_People%27s_Republic_of_China.svg.png" />
     <Content Include="Content\bible-pictures-sermon-on-the-mount-958526-wallpaper.jpg" />
     <Content Include="Content\bootstrap-theme.css" />
     <Content Include="Content\bootstrap-theme.min.css" />
     <Content Include="Content\bootstrap.css" />
     <Content Include="Content\bootstrap.min.css" />
+    <Content Include="Content\Christ_in_Spirit_World-e1385391202877.jpg" />
+    <Content Include="Content\missionpresident1.jpg" />
     <Content Include="favicon.ico" />
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="Global.asax" />
