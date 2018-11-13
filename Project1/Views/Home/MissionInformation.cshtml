@@ -12,5 +12,11 @@
 @Html.Raw((String)ViewBag.Output)
 <div class="mission-textbox mission-question">
     <h4>Post any questions you have:</h4>
-    <textarea class="form-control" rows="10" cols="75"></textarea>
+    <textarea placeholder="Type something..." class="form-control" rows="10" cols="75"></textarea>
+    <a style="margin-top: 15px;" href="" class="btn btn-primary">Post Question</a>
+</div>
+<div style="margin-left: 20px; margin-top: 20px;">
+    <h3>FAQ Section:</h3>
+    @Html.Raw((String)ViewBag.Reply)
+    <a style="margin-top: 15px;" href=@Url.Action("Reply", "Home") class="btn btn-primary">Reply</a>
 </div>

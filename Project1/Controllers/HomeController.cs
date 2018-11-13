@@ -9,6 +9,8 @@ namespace Project1.Controllers
 {
     public class HomeController : Controller
     {
+        static Mission mission = new Mission();
+
         public ActionResult Index()
         {
             return View();
@@ -21,7 +23,6 @@ namespace Project1.Controllers
 
         public ActionResult Submit(string value)
         {
-            Mission mission = new Mission();
             if (value == "Shanghai")
             {
                 mission.MissionName = "China Shanghai Mission";
@@ -62,6 +63,22 @@ namespace Project1.Controllers
             ViewBag.Output += "<h4>Local Religion: " + mission.Religion + "</h4>";
             ViewBag.Output += "<img style=\"width: 300px; height: 200px;\" src=" + mission.Flag + ">";
             ViewBag.Output += "</div>";
+            return View("MissionInformation");
+        }
+
+        public ActionResult Reply()
+        {
+            ViewBag.Mission = mission.MissionName;
+            ViewBag.Output += "<div class=\"mission-textbox\">";
+            ViewBag.Output += "<h4>Mission Name: " + mission.MissionName + "</h4>";
+            ViewBag.Output += "<h4>President's Name: " + mission.PresidentName + "</h4>";
+            ViewBag.Output += "<h4>Mission Address: " + mission.Address + "</h4>";
+            ViewBag.Output += "<h4>Language Spoken: " + mission.Language + "</h4>";
+            ViewBag.Output += "<h4>Area Climate: " + mission.Climate + "</h4>";
+            ViewBag.Output += "<h4>Local Religion: " + mission.Religion + "</h4>";
+            ViewBag.Output += "<img style=\"width: 300px; height: 200px;\" src=" + mission.Flag + ">";
+            ViewBag.Output += "</div>";
+            ViewBag.Reply += "<textarea placeholder=\"Type something...\" style=\"margin-top: 15px;\" class=\"form-control\" rows=\"10\" cols=\"75\"></textarea>";
             return View("MissionInformation");
         }
 
