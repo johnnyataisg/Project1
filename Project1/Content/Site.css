@@ -1,24 +1,33 @@
-﻿body {
-    padding-top: 50px;
-    padding-bottom: 20px;
+﻿.video-background {
+    background-image: url(../Content/bible.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
 }
 
-/* Set padding to keep content from hitting the edges */
-.body-content {
+.video-cover {
+    background: linear-gradient(#000000c9,#54545466, #000000cc);
+    min-height: 600px;
+    text-align: center;
 }
 
-/* Override the default bootstrap behavior where horizontal description lists 
-   will truncate terms that are too long to fit in the left column 
-*/
-.dl-horizontal dt {
-    white-space: normal;
+.video-cover:hover {
+    cursor: pointer;
 }
 
-/* Set width on the form input elements since they're 100% wide by default */
-input,
-select,
-textarea {
-    max-width: 280px;
+.intro-text {
+    padding-left: 20%;
+    padding-right: 20%;
+    padding-top: 15%;
+    padding-bottom: 25px;
+    font-size: 20px;
+    text-align: center;
+    color: #ffffff;
+    line-height: 35px;
+}
+
+.intro-button {
+    margin-bottom: 10%;
+    width: 20%;
 }
 
 .header-center-align {
@@ -66,14 +75,7 @@ textarea {
     float: right;
 }
 
-.intro-text {
-    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
-    font-size: 20px;
-    text-align: center;
-    margin-left: 10px;
-    margin-right: 10px;
-    margin-top: 50px;
-}
+
 
 .custom-button {
     color: #000000;

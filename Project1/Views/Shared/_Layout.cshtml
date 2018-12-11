@@ -4,39 +4,44 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>@ViewBag.Title - Missionary Work</title>
-    @Styles.Render("~/Content/css")
+    <link href="~/Content/bootstrap.min.css" type="text/css" rel="stylesheet" />
+    <link href="~/Content/Site.css" type="text/css" rel="stylesheet" />
     @Scripts.Render("~/bundles/modernizr")
 </head>
 <body onload="typeWriter();" style="background-color: antiquewhite;">
-    <div class="navbar navbar-inverse navbar-fixed-top" style="transition-duration: 0.4s;">
-        <div class="container lucida-text" style="margin-left: 20px; width: 100%;">
-            <div class="navbar-header" style="float: left;">
-                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                </button>
-                @Html.ActionLink("Missionary Portal", "Index", "Home", new { area = "" }, new { @class = "navbar-brand" })
-            </div>
-            <div class="navbar-collapse collapse" style="float: right; margin-right: 30px;">
-                <ul class="nav navbar-nav">
-                    <li>@Html.ActionLink("Mission", "Mission", "Home")</li>
-                    <li>@Html.ActionLink("About", "About", "Home")</li>
-                    <li>@Html.ActionLink("Contact", "Contact", "Home")</li>
-                </ul>
-            </div>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light" style="transition-duration: 0.4s;">
+        <a class="navbar-brand" href=@Url.Action("Index", "Home")>Missionary Portal</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarColor03" aria-controls="navbarColor03" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navbarColor03">
+            <ul class="navbar-nav mr-auto">
+                <li class="nav-item active">
+                    <a class="nav-link" href=@Url.Action("Mission", "Home")>Mission <span class="sr-only">(current)</span></a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href=@Url.Action("About", "Home")>About</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href=@Url.Action("Contact", "Home")>Contact</a>
+                </li>
+            </ul>
+            <form class="form-inline my-2 my-lg-0">
+                <input class="form-control mr-sm-2" type="text" placeholder="Search">
+                <button class="btn btn-secondary my-2 my-sm-0" type="submit">Search</button>
+            </form>
         </div>
-    </div>
-    <div class="container body-content" style="min-width: 100%;">
+    </nav>
+    <div>
         @RenderBody()
         <hr />
         <footer style="padding-left: 25px;">
             <p>&copy; @DateTime.Now.Year - IS 403 Project 1 Missionary Portal</p>
         </footer>
     </div>
-
-    @Scripts.Render("~/bundles/jquery")
     @Scripts.Render("~/bundles/bootstrap")
+    @Scripts.Render("~/bundles/jquery")
     @RenderSection("scripts", required: false)
 </body>
 </html>

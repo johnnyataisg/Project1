@@ -161,6 +161,7 @@
     <Content Include="Content\2000px-Logo_of_the_Church_of_Jesus_Christ_of_Latter-day_Saints.svg.png" />
     <Content Include="Content\255px-Flag_of_the_People%27s_Republic_of_China.svg.png" />
     <Content Include="Content\bible-pictures-sermon-on-the-mount-958526-wallpaper.jpg" />
+    <Content Include="Content\bible.jpg" />
     <Content Include="Content\bootstrap-theme.css" />
     <Content Include="Content\bootstrap-theme.min.css" />
     <Content Include="Content\bootstrap.css" />

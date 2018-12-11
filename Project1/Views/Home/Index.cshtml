@@ -1,33 +1,33 @@
 ﻿@{
     ViewBag.Title = "Home Page";
 }
-
-<div class="jumbotron header-center-align" style="padding: 0px;">
-    <div class="header-cover" style="color: #000000;">
-        <div style="padding-top: 100px;">
-            <img style="width: 400px;" src="~/Content/2000px-Logo_of_the_Church_of_Jesus_Christ_of_Latter-day_Saints.svg.png" />
-            <p id="demo" style="margin-top: 30px; padding-left:30%; padding-right:30%; font-size: 25px;" class="lead roman-text"></p>
-            <p style="margin-top: 40px;"><a href="" class="btn custom-button btn-lg lucida-text">Go Forth To Serve &raquo;</a></p>
-            <script>
-                var i = 0;
-                var txt = "\"Go ye therefore, and teach all nations, baptizing them in the name of the Father, and of the Son, and of the Holy Ghost\" - Matthew 28:19";
-                var speed = 50;
-
-                function typeWriter() {
-                    if (i < txt.length) {
-                        document.getElementById("demo").innerHTML += txt.charAt(i);
-                        i++;
-                        setTimeout(typeWriter, speed);
-                    }
-                }
-            </script>
-        </div>
+<div class="video-background">
+    <div class="video-cover">
+        <p class="intro-text">
+            “We are commanded by God to take this gospel to all the world. That is the cause that must unite us today. 
+            Only the gospel will save the world. … Only the gospel will unite men of all races. … Only the gospel will bring joy, 
+            happiness, and salvation to the human family.”
+            <br />
+            -President Ezra Taft Benson, <span style="font-style: italic">Preach My Gospel</span>
+        </p>
+        <button onclick="document.getElementById('id01').style.display='block'" class="btn btn-outline-warning intro-button">Play Video</button>
     </div>
 </div>
-<iframe class="row2-video" src="https://www.youtube.com/embed/fjwrMfY8tlY" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-<div class="row2-intro">
-    <p class="intro-text">
-        “We are commanded by God to take this gospel to all the world. That is the cause that must unite us today. Only the gospel will save the world. … Only the gospel will unite men of all races. … Only the gospel will bring joy, happiness, and salvation to the human family.”
+
+<div class="jumbotron" style="margin-bottom: 0px;">
+    <h1 class="display-3">Hello, world!</h1>
+    <p class="lead">This is a simple hero unit, a simple jumbotron-style component for calling extra attention to featured content or information.</p>
+    <hr class="my-4">
+    <p>It uses utility classes for typography and spacing to space content out within the larger container.</p>
+    <p class="lead">
+        <a class="btn btn-primary btn-lg" href="#" role="button">Go Forth To Serve</a>
     </p>
-    <p class="intro-text" style="margin-top: 20px; font-style: italic;">—President Ezra Taft Benson<br />Preach My Gospel, 2</p>
+</div>
+
+<div id="id01" class="modal">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <iframe src="https://www.youtube.com/embed/fjwrMfY8tlY" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        </div>
+    </div>
 </div>
