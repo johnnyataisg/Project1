@@ -2,69 +2,36 @@
 
 @{
     ViewBag.Title = "Mission";
-    Layout = null;
 }
 
-<link href="~/Scripts/popper.min.js" />
+<div class="johnnymargin">
+    <div class="container" style="margin-left: 0px;">
+        <h3>Mission Database:</h3>
+        <script>
+            function myFunction() {
+                document.getElementById("myDropdown").classList.toggle("show");
+            }
+            window.onclick = function (event) {
+                if (!event.target.matches('.dropbtn')) {
 
-<head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>@ViewBag.Title - Missionary Work</title>
-    @Styles.Render("~/Content/css")
-    @Scripts.Render("~/bundles/modernizr")
-</head>
-<body style="padding-bottom: 0; background-image: url(../Content/LDS_Church_presence_in_world.png); background-repeat: no-repeat; background-size: cover;">
-    <div style="background-color: rgba(105, 105, 105, 0.52); width: 100%; height: 100%;">
-        <div class="navbar navbar-inverse navbar-fixed-top" style="transition-duration: 0.4s;">
-            <div class="container lucida-text" style="margin-left: 20px; width: 100%;">
-                <div class="navbar-header" style="float: left;">
-                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
-                        <span class="icon-bar"></span>
-                        <span class="icon-bar"></span>
-                        <span class="icon-bar"></span>
-                    </button>
-                    @Html.ActionLink("Missionary Portal", "Index", "Home", new { area = "" }, new { @class = "navbar-brand" })
-                </div>
-                <div class="navbar-collapse collapse" style="float: right; margin-right: 30px;">
-                    <ul class="nav navbar-nav">
-                        <li>@Html.ActionLink("Mission", "Mission", "Home")</li>
-                        <li>@Html.ActionLink("About", "About", "Home")</li>
-                        <li>@Html.ActionLink("Contact", "Contact", "Home")</li>
-                    </ul>
-                </div>
-            </div>
-        </div>
-        <div class="johnnymargin">
-            <div class="container" style="margin-left: 0px;">
-                <h3>Mission Database:</h3>
-                <script>
-                    function myFunction() {
-                        document.getElementById("myDropdown").classList.toggle("show");
-                    }
-                    window.onclick = function (event) {
-                        if (!event.target.matches('.dropbtn')) {
-
-                            var dropdowns = document.getElementsByClassName("dropdown-content");
-                            var i;
-                            for (i = 0; i < dropdowns.length; i++) {
-                                var openDropdown = dropdowns[i];
-                                if (openDropdown.classList.contains('show')) {
-                                    openDropdown.classList.remove('show');
-                                }
-                            }
+                    var dropdowns = document.getElementsByClassName("dropdown-content");
+                    var i;
+                    for (i = 0; i < dropdowns.length; i++) {
+                        var openDropdown = dropdowns[i];
+                        if (openDropdown.classList.contains('show')) {
+                            openDropdown.classList.remove('show');
                         }
                     }
-                </script>
-                <div class="dropdown">
-                    <button onclick="myFunction()" class="dropbtn">Select a mission</button>
-                    <div id="myDropdown" class="dropdown-content">
-                        <a href=@Url.Action("Submit", "Home", new { value = "Shanghai" })>China Shanghai Mission</a>
-                        <a href=@Url.Action("Submit", "Home", new { value = "Pyongyang" })>North Korea Pyongyang Mission</a>
-                        <a href=@Url.Action("Submit", "Home", new { value = "Spirit" })>Spirit Prison Mission</a>
-                    </div>
-                </div>
+                }
+            }
+        </script>
+        <div class="dropdown">
+            <button onclick="myFunction()" class="dropbtn">Select a mission</button>
+            <div id="myDropdown" class="dropdown-content">
+                <a href=@Url.Action("Submit", "Home", new { value = "Shanghai" })>China Shanghai Mission</a>
+                <a href=@Url.Action("Submit", "Home", new { value = "Pyongyang" })>North Korea Pyongyang Mission</a>
+                <a href=@Url.Action("Submit", "Home", new { value = "Spirit" })>Spirit Prison Mission</a>
             </div>
         </div>
     </div>
-</body>
+</div>

@@ -7,6 +7,7 @@ using System.Web.Mvc;
 
 namespace Project1.Controllers
 {
+    [RequireHttps]
     public class HomeController : Controller
     {
         static Mission mission = new Mission();
@@ -88,6 +89,11 @@ namespace Project1.Controllers
         }
 
         public ActionResult Contact()
+        {
+            return View();
+        }
+
+        public ActionResult Login()
         {
             return View();
         }
